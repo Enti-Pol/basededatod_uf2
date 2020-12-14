@@ -1,0 +1,7 @@
+SELECT 
+	characters_weapons.id_weapon,
+    weapons.weapon,
+    COUNT(characters_weapons.id_weapon) AS num_weapon
+FROM `characters_weapons`, weapons
+WHERE weapons.id_weapon=characters_weapons.id_weapon
+GROUP BY characters_weapons.id_weapon
