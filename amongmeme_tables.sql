@@ -165,3 +165,7 @@ CREATE TABLE characters_armours(
 	FOREIGN KEY (id_character) REFERENCES characters(id_character),
 	FOREIGN KEY (id_armour) REFERENCES armours(id_armour)
 );
+
+ALTER TABLE `characters_items` DROP FOREIGN KEY `characters_items_ibfk_2`; ALTER TABLE `characters_items` ADD CONSTRAINT `characters_items_ibfk_2` FOREIGN KEY (`id_item`) REFERENCES `items`(`id_item`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `characters_weapons` DROP FOREIGN KEY `characters_weapons_ibfk_2`; ALTER TABLE `characters_weapons` ADD CONSTRAINT `characters_weapons_ibfk_2` FOREIGN KEY (`id_weapon`) REFERENCES `weapons`(`id_weapon`) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE `characters_armours` DROP FOREIGN KEY `characters_armours_ibfk_2`; ALTER TABLE `characters_armours` ADD CONSTRAINT `characters_armours_ibfk_2` FOREIGN KEY (`id_armour`) REFERENCES `armours`(`id_armour`) ON DELETE CASCADE ON UPDATE RESTRICT;
