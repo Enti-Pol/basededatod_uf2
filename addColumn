@@ -1,0 +1,7 @@
+ALTER TABLE stats
+ADD felicidad INT AFTER level;
+ALTER TABLE stats
+ADD sadness INT AFTER felicidad;
+
+ALTER TABLE stats
+CHANGE felicidad joy INT
